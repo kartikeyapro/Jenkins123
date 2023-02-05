@@ -38,12 +38,7 @@ pipeline {
                 
             }
 			}
-	   stage('Code SonarScan') {
-            steps {		
-		      sh 'mvn sonar:sonar -Dsonar.host.url=http://34.68.133.210:9000 -Dsonar.login=32aa7ed3793424ab043cd6e6fa227ab9781c5c97'	
-			  }
-			  }
-
+	 
 		stage('Code Package') {
             steps {
              sh 'mvn package' 
